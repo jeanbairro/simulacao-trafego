@@ -1,2 +1,3 @@
-# simulacao-trafego
-Trabalho da disciplina Simulação discreta de sistemas
+# Simulação discreta de sistemas
+
+Uma simulação real de tráfego de um trecho do município de Bombinhas.
