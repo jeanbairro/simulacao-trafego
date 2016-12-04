@@ -1,14 +1,20 @@
-$(document).on("click", "#simular", function(){
-	var veraoOuferiado = $("#tipo-simulacao").val() === "verao-ou-feriado";
-	var rnd = new Random(veraoOuferiado);
-	var tab = new Tabela(rnd);
-	
-	tab.inicializarEntidades();
-	tab.calcularProcessoDesmonoramento();
+$(document).ready(function() {
+	var ui = new UI(document.getElementById('canvas').getContext("2d"));
+	ui.desenharEstrada();
 
-	var ui = new UI();
-	ui.montarTabela("#meia-pista", tab, true);
+	$(document).on("click", "#simular", function(){
+		var veraoOuferiado = $("#tipo-simulacao").val() === "verao-ou-feriado";
+		var rnd = new Random(veraoOuferiado);
+		var tab = new Tabela(rnd);
+		
+		tab.inicializarEntidades();
+		tab.calcularProcessoDesmonoramento();
 
-	tab.calcularProcessoTpa();
-	ui.montarTabela("#tpa", tab, false);
+		ui.montarTabela("#meia-pista", tab, true);
+
+		tab.calcularProcessoTpa();
+		ui.montarTabela("#tpa", tab, false);
+
+		ui.desenharSimulacao(tab);
+	});
 });

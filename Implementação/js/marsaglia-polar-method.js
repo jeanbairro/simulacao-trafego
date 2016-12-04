@@ -46,5 +46,5 @@ function normalRandomScaled(mean, stddev) {
 function lnRandomScaled(gmean, gstddev) {
 	var r = normalRandomInRange(-1, 1);
 	r = r * Math.log(gstddev) + Math.log(gmean);
-	return Math.round(Math.exp(r));
+	return Math.round(Math.exp(r));	
 }
