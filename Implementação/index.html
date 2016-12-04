@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Simulação de Tráfego</title>
+		<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="page-header">Simulação de Tráfego no acesso de Bombinhas</h1>
+			<p>Durante a temporada e feriados Bombinhas recebe um número estrondoso de turistas. Isso influencia diretamente na simulação, por isso escolha o tipo de simulação e clique em <strong>Simular</strong>.</p>
+
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label>Tipo de Simulação</label>
+						<select class="form-control" id="tipo-simulacao">
+							<option value="dia-normal">Dia normal</option>
+							<option value="verao-ou-feriado">Verão/Feriado</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="form-group-btn">
+						<button id="simular" class="btn btn-default" type="button">Simular</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">Meia pista (Desmoronamento)</div>
+				<div class="panel-body">
+					<p>A Prefeitura de Porto Belo anunciou a interdição parcial de uma das pistas de acesso ao Morro de Bombinhas. A força da chuva causou estragos na região e fez com que parte da pista cedesse.</p>
+				</div>
+
+				<table class="table table-stripped" id="meia-pista">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>TEC</th>
+							<th>TC</th>
+							<th>TS-I</th>
+							<th>TS</th>
+							<th>TS-F</th>
+							<th>Fila</th>
+						</tr>
+					</thead>
+
+					<tbody></tbody>
+				</table>
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">TPA</div>
+				<div class="panel-body">
+					<p>A Taxa de Preservação Ambiental (TPA) de Bombinhas, no Litoral Norte catarinense, volta a ser aplicada na cidade a partir de 15 de novembro de 2016 e vai até 15 de abril de 2017. A cobrança foi criada para custear prejuízos ambientais gerados pelo turismo, como limpeza das praias.</p>
+				</div>
+
+				<table class="table table-stripped" id="tpa">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>TC</th>
+							<th>TS-I</th>
+							<th>TS</th>
+							<th>TS-F</th>
+							<th>Fila</th>
+						</tr>
+					</thead>
+					
+					<tbody></tbody>
+				</table>
+			</div>
+			
+		</div>
+		<script src="lib/js/jquery-3.1.0.min.js"></script>
+		<script src="lib/js/bootstrap.min.js"></script>
+		<script src="js/marsaglia-polar-method.js"></script>
+		<script src="js/random.js"></script>
+		<script src="js/tabela-sistema.js"></script>
+		<script src="js/ui.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+<html>
